@@ -1,8 +1,12 @@
 <html>
 <body>
     <div class="login">
-       <h1>Student Exam Performance Indicator</h1>
-   
+        <style>
+            body {
+                background-color: #f2f2f2; /* Set the background color for the entire page */
+            }
+            
+        </style>
        <form action="{{ url_for('predict_datapoint')}}" method="post">
         <h1>
             <legend>Student Exam Performance Prediction</legend>
@@ -104,8 +108,8 @@
             <input class="btn btn-primary" type="submit" value="Predict your Maths Score" required />
         </div>
     </form>
-    <h2>
-       THE  prediction is {{results}}
-    </h2>
+    <h3>
+       Predicted result is: {{results}}
+    </h3>
    <body>
 </html>
